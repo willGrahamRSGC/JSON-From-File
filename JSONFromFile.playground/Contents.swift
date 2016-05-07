@@ -2,8 +2,14 @@
 
 import Foundation
 
-// get the file path for the file "test.json" in the playground bundle
-let filePath = NSBundle.mainBundle().pathForResource("google-maps", ofType: "json")
+// NOTE: "This JSON dataset identifies public locations and cooling centres in the City of
+//        Toronto that offer an air-conditioned space for temporary relief on heat alert
+//        and extreme heat alert days."
+//
+// SOURCE: http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=e7356d1900531510VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD
+//
+// get the file path for the file "ac-in-toronto" in the playground bundle
+let filePath = NSBundle.mainBundle().pathForResource("ac-in-toronto", ofType: "json")
 
 // get the contentData
 let contentData = NSFileManager.defaultManager().contentsAtPath(filePath!)
